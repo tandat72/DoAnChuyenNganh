@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+span{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 23px;
+}
+ul{
+    list-style: none;
+}
+header{
+    height: 100px;
+    width: 100vw;
+    border-bottom: 2px solid #dddd;
+    /* text-align: center; */
+    background: url(../image/admin.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+/*----------------------------Header------------------------*/
+header >.icon{
+    display: flex;
+    justify-content: right;
+}
+header h1{
+    text-align: center;
+}
+.icon > li{
+    padding: 0 12px;
+    list-style: none;
+}
+.icon > li > img{
+    height: 20px;
+}
+.icon > li > a{
+    padding-top: 8px;
+    margin-right: 40px;
+}
+/*----------------------------Menu--------------------------*/
+/* setting border menu when hover mouse */
+#main-menu>li>span{
+    position: relative;
+}
+#main-menu>li>span::before{
+    content: "";
+    height: 2px;
+    width: 0px;
+    background: red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 1.0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu>li:hover>span::before{
+    width: 100%;
+}
+
+/* menu drop down */
+
+.dropdown{
+    display: none;
+}
+.active{
+    display: block;
+}
+.dropdown li:hover a{
+    background-color: rgb(235, 243, 116);
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(189, 186, 186);
+}
+
+/*----------------------------Danh muc----------------------*/
+.admin-content{
+    display: flex;
+}
+.admin-content-left{
+    background-color: #ffecda;
+    width: 20%;
+    height: 100vh;
+    padding: 30px 0 0 12px;
+    text-align: center;
+}
+/* .admin-content-left> #main-menu> li> span{
+    font-weight: bold;
+} */
+.admin-content-left #main-menu li{
+    margin: 6px 0;
+}
+/* .admin-content-left #main-menu .dropdown{
+    margin-left: 20px;
+} */
+.admin-content-right{
+    width: 80%;
+    padding: 30px 0 0 12px;
+}
+
+input{
+    height: 30px;
+    width: 200px;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+
+ button{
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: brown;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+ button:hover{
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+
+}
+#add-category-child{
+    padding-top: 20px;
+}
+/*------------------------------------CartegoryList-------------------------------------------*/
+.admin-content-right-category_list table{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admin-content-right-category_list table tr th ,td{
+    border: 1px solid #dddddd;
+}
+table{
+    border-collapse: collapse;
+}
+/*--------------------------------------Product-----------------------------------------------*/
+.admin-content-right-product-add input,select {
+    height: 30px;
+    width: 200px;
+    display: block;
+    margin: 6px 0 12px;
+    padding-left: 12px;
+}
+.admin-content-right-product-add textarea{
+    display: block;
+    height: 200px;
+    width: 500px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+.admin-content-right-product-add button{
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: brown;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.admin-content-right-product-add button:hover{
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+}
+.product_size{
+    display: flex;
+}
+.product_size input{
+    padding-left: 0px!important;
+    height: 15px!important;
+    margin-right: 10px!important;
+    width: 15px!important;
+}
+.admin-content-right-category_list table tbody tr td p img{
+    height: 50px;
+    width: 50px;
+}
+.admin-content-right-category_list table tbody tr td p{
+    font-size: 10px;
+    
+}
